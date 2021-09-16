@@ -15,6 +15,19 @@ $color-gray:#aaa;
     align-items: center;
 }
 
+//mediaquery
+@mixin sp {
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+//function 
+@function rem($px,$base:16){
+    @return $px / $base *1rem;
+}
+
+
 
 
 
@@ -23,9 +36,15 @@ $color-gray:#aaa;
 /*共通設定*/
 body {
     background-color: #aaa;
+    $color-gray;
+    font-size: rem(16);
+
+    @include sp {
+        background-color: rgb(115, 226, 25);
+    }
 
     h1 {
-        font-size: 16px*2;
+        font-size: rem(25);
     }
 }
 

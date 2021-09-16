@@ -3,6 +3,11 @@
 body {
   background-color: #aaa;
 }
+@media (max-width: 768px) {
+  body {
+    background-color: #73e219;
+  }
+}
 body h1 {
   font-size: 32px;
 }
